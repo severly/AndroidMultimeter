@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HardcodedText">
+        <ignore path="res/layout/fragment_advanced.xml" />
+        <ignore path="res/layout/fragment_lcr_parallel.xml" />
+        <ignore path="res/layout/fragment_lcr_series.xml" />
+    </issue>
+</lint>

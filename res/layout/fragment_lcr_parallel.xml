@@ -1,0 +1,163 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    tools:context=".MultiTool$lcrParallelFragment" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp" >
+
+        <TableRow
+	        android:id="@+id/tableRow1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+        
+	        <TextView
+		        android:id="@+id/freqText"
+		        android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+		        android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:text="Frequency:"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+	        
+           	<EditText
+		        android:id="@+id/freqInput"
+		        android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:ems="10"
+		        android:inputType="number"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+        
+        </TableRow>
+        
+        <TableRow
+	        android:id="@+id/tableRow2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+        
+	        <SeekBar
+		        android:id="@+id/freqBar"
+                android:textColor="@color/white"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		     	android:layout_marginTop="5dp"
+		        android:max="100000"
+		        android:progress="1000" />
+        
+        </TableRow>
+        
+        <TableRow
+	        android:id="@+id/tableRow3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/resText"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/res"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/resistance"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Resistance"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:id="@+id/pxLabel"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+               android:padding="5dp"
+                android:gravity="center"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:text="@string/react"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            <TextView
+                android:id="@+id/reactance"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="Reactance"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+        </TableRow> 
+        
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="vertical">
+    
+	    <ImageView
+	        android:id="@+id/RCImage"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/image_background"
+	        android:layout_gravity="center_horizontal"
+	        android:contentDescription="@string/rcpar"
+	        android:src="@raw/prc181x144" />
+	
+	    <TextView
+	        android:id="@+id/usbText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:hint="USB Text"
+	        android:maxLines="100"
+	        android:scrollbars="vertical"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <TextView
+	        android:id="@+id/connectText"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal|bottom"
+	        android:layout_marginBottom="10dp"
+	        android:gravity="center"
+	        android:hint="Disconnected"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    </LinearLayout>
+
+</LinearLayout>

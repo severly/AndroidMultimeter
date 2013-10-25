@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    tools:context=".MultiTool$advancedFragment">
+
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/Q"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <TextView
+                android:id="@+id/qualityfactor"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:hint="Q"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+                
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+            
+            <TextView
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/D"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <TextView
+                android:id="@+id/dissipationfactor"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:hint="D"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+            
+            <TextView
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/mag"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <TextView
+                android:id="@+id/magText"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:hint="Mag"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+        </TableRow>
+        
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+            
+            <TextView
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:text="@string/phase"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+            <TextView
+                android:id="@+id/phiText"
+                android:background="@drawable/cell_shape" 
+                android:textColor="@color/white"
+                android:padding="5dp"
+		        android:layout_width="0px"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+		        android:gravity="center"
+		        android:hint="Phase"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+            
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/connectText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:hint="Disconnected"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+</LinearLayout>
