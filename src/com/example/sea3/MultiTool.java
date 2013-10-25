@@ -8,6 +8,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
 import android.graphics.Color;
 import android.hardware.usb.UsbManager;
 import android.os.Bundle;
@@ -130,22 +131,25 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 	public void onResume(){
 		super.onResume();
 		
-		// Register device detached receiver
-		try 
-		{
+		// Register device detached receiver, if not already registered
+		try{
 			registerReceiver(mUsbReceiver, new IntentFilter (UsbManager.ACTION_USB_DEVICE_DETACHED) );
 		} 
 		catch(IllegalArgumentException e) {}
 		
-		if( usbObject.usbManager == null){
+		synchronized(this)
+		{
+			
+		if( usbObject.usbManager == null)
 			usbObject.setUsbService( getApplicationContext() );
-		}
 		
-		if( usbObject.mainHandler == null){
+		if( usbObject.mainHandler == null)
 			usbObject.setMainHandler( mainHandler );
-		}
 		
-		usbObject.connect2Device();
+		if( !usbObject.isConnected )
+			usbObject.connect2Device();
+		
+		}
 	}
 	
 	public void onPause(){
@@ -249,6 +253,30 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 			}
 			return null;
 		}
+		
+		// Hopefully allows use to see two fragment panes at once
+		@Override
+	    public float getPageWidth(int position) {
+			if( screenIsLarge() )
+				return(1/3f);
+			else return(1f);
+	    }
+	}
+	
+	private boolean screenIsLarge(){
+		int screenMask = getResources().getConfiguration().screenLayout;
+		if ( ( screenMask & Configuration.SCREENLAYOUT_SIZE_MASK) == 
+				Configuration.SCREENLAYOUT_SIZE_LARGE) {
+		    return true;
+		}
+		
+		if ( (screenMask & Configuration.SCREENLAYOUT_SIZE_MASK) == 
+		        Configuration.SCREENLAYOUT_SIZE_XLARGE) {
+				    return true;
+		}
+		
+		return false;
+		
 	}
 
 	/*
@@ -278,6 +306,7 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 	            	usbObject.stopThread();
 	            	usbObject.unsetDevice();
 	            	Toast.makeText( context, "Device detached", Toast.LENGTH_SHORT ).show();
+	            	
 	            	if( lcrSeriesFragment.isVisible )
 	            		lcrSeriesFragment.setConnectText(false);
 	            	
@@ -296,7 +325,7 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 	/**
 	 * ---------------------------------------------------------------------------------
 	 * ---------------------------------------------------------------------------------
-	 * FRAGMENT
+	 * FRAGMENT SECTION
 	 * ---------------------------------------------------------------------------------
 	 * ---------------------------------------------------------------------------------
 	 */
