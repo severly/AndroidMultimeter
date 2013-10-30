@@ -17,29 +17,28 @@
 	        android:id="@+id/tableRow1"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content" >
-        
-	        <TextView
-		        android:id="@+id/freqText"
-		        android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-                android:padding="5dp"
-		        android:layout_width="0px"
-		        android:layout_weight="1"
-		        android:gravity="center"
-		        android:text="Frequency:"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
 	        
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+            
            	<EditText
 		        android:id="@+id/freqInput"
-		        android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-                android:padding="5dp"
 		        android:layout_width="0px"
-		        android:layout_weight="1"
+		        android:layout_weight="3"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextLarge"
+                android:padding="5dp"
 		        android:gravity="center"
 		        android:ems="10"
 		        android:inputType="number"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		        android:hint="Frequency"/>
+           	
+           	<Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
         
         </TableRow>
         
@@ -66,26 +65,14 @@
 	        android:layout_marginTop="10dp" >
 
             <TextView
-                android:id="@+id/resText"
-                android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-                android:padding="5dp"
+                android:id="@+id/reactance"
                 android:layout_width="0px"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/res"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/resistance"
-                android:background="@drawable/cell_shape" 
                 android:textColor="@color/white"
+                android:textAppearance="@style/TextXLarge"
                 android:padding="5dp"
-                android:layout_width="0px"
-                android:layout_weight="1"
                 android:gravity="center"
-                android:hint="Resistance"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:hint="00.00pF"/>
             
         </TableRow>
 
@@ -95,27 +82,18 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp" >
 
+            
             <TextView
-                android:id="@+id/xLabel"
-                android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-                android:padding="5dp"
-                android:gravity="center"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:text="@string/react"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/reactance"
-                android:background="@drawable/cell_shape" 
+                android:id="@+id/resistance"
+               
                 android:textColor="@color/white"
                 android:padding="5dp"
                 android:layout_width="0px"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:hint="Reactance"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:hint="00.00kΩ"
+                android:textAppearance="@style/TextXLarge" />
+            
             
         </TableRow> 
         

@@ -11,49 +11,54 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_gravity="center|top"
         android:layout_marginTop="10dp" >
-
+        
         <TableRow
 	        android:id="@+id/tableRow1"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content" >
-        
-	        <TextView
-		        android:id="@+id/freqText"
-		        android:background="@drawable/cell_shape" 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:gravity="center" >
+
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+            
+            <EditText
+                android:id="@+id/freqInput"
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:textAppearance="@style/TextLarge"
                 android:textColor="@color/white"
-		        android:padding="5dp"
-		        android:layout_width="0px"
-		        android:layout_weight="1"
-		        android:gravity="center"
-		        android:text="Frequency:"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
-	        
-           	<EditText
-		        android:id="@+id/freqInput"
-		        android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-                android:padding="5dp"
-		        android:layout_width="0px"
-		        android:layout_weight="1"
-		        android:gravity="center"
-		        android:ems="10"
-		        android:inputType="number"
-		        android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:background="@drawable/cell_shape"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="Frequency"
+                android:inputType="number"
+                android:padding="5dp" >
+            </EditText>
+            
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
         
         </TableRow>
         
         <TableRow
 	        android:id="@+id/tableRow2"
-	        android:layout_width="match_parent"
-	        android:layout_height="wrap_content" >
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+         	android:gravity="center" >
         
-	        <SeekBar
+	       <SeekBar
 		        android:id="@+id/freqBar"
                 android:textColor="@color/white"
 		        android:layout_weight="1"
+		        android:layout_marginTop="5dp"
 		        android:gravity="center"
-		     	android:layout_marginTop="5dp"
+		     	
 		        android:max="100000"
 		        android:progress="1000" />
         
@@ -61,61 +66,63 @@
         
         <TableRow
 	        android:id="@+id/tableRow3"
-	        android:layout_width="match_parent"
+	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginTop="10dp" >
+	        android:layout_marginTop="10dp"
+	        android:gravity="center" >
+
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
 
             <TextView
-                android:id="@+id/resText"
+                android:id="@+id/reactance"
                 android:background="@drawable/cell_shape" 
+                android:layout_width="0dp"
+                android:layout_weight="3" 
+                android:layout_gravity="center"
                 android:textColor="@color/white"
                 android:padding="5dp"
-                android:layout_width="0px"
-                android:layout_weight="1"
                 android:gravity="center"
-                android:text="@string/res"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/resistance"
-                android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-                android:padding="5dp"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:hint="Resistance"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:textAppearance="@style/TextXLarge"
+                android:hint="00.00pF" />
+            
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
             
         </TableRow>
 
         <TableRow
             android:id="@+id/tableRow4"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:layout_marginTop="5dp" >
 
+           <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
+            
             <TextView
-                android:id="@+id/pxLabel"
-                android:background="@drawable/cell_shape" 
-                android:textColor="@color/white"
-               android:padding="5dp"
+                android:id="@+id/resistance"
+                android:background="@drawable/cell_shape"
+                android:layout_width="0dp"
+                android:layout_weight="3"
                 android:gravity="center"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:text="@string/react"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <TextView
-                android:id="@+id/reactance"
-                android:background="@drawable/cell_shape" 
+                android:textAppearance="@style/TextXLarge"
                 android:textColor="@color/white"
                 android:padding="5dp"
-                android:layout_width="0px"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:hint="Reactance"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+                android:hint="00.00kΩ" />
+            
+            
+            <Space
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1" />
             
         </TableRow> 
         

@@ -98,7 +98,6 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 					lcrSeriesFragment.imageId = b.getInt("sImage");
 					lcrSeriesFragment.lcrImage.setImageResource( lcrSeriesFragment.imageId );
 				}
-				lcrSeriesFragment.xLabel.setText( b.getString("xLabel") );
 				lcrSeriesFragment.resText.setText( b.getString("R") );
 				lcrSeriesFragment.xText.setText( b.getString("X") );
 				lcrSeriesFragment.usbText.setText( b.getString("status") );
@@ -110,7 +109,6 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 					lcrParallelFragment.imageId = b.getInt("pImage");
 					lcrParallelFragment.lcrImage.setImageResource( lcrParallelFragment.imageId );
 				}
-				lcrParallelFragment.pxLabel.setText( b.getString("pxLabel") );
 				lcrParallelFragment.resText.setText( b.getString("pR") );
 				lcrParallelFragment.pxText.setText( b.getString("pX") );
 				
@@ -343,7 +341,6 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 		public static boolean isVisible = false;
 		
 		public static TextView resText, xText, connectText;
-		public static TextView xLabel;
 		public static TextView usbText;
 		public static EditText freqInput;
 		public static ImageView lcrImage;
@@ -418,7 +415,6 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 			
 			resText		= (TextView) rootView.findViewById(R.id.resistance);
 			xText 		= (TextView) rootView.findViewById(R.id.reactance);
-			xLabel 		= (TextView) rootView.findViewById(R.id.xLabel);
 			connectText = (TextView) rootView.findViewById(R.id.connectText);
 			usbText 	= (TextView) rootView.findViewById(R.id.usbText);
 			
@@ -493,7 +489,6 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 		public static boolean isVisible = false;
 		
 		public static TextView resText, pxText, connectText;
-		public static TextView pxLabel;
 		public static TextView usbText;
 		public static EditText freqInput;
 		public static ImageView lcrImage;
@@ -565,7 +560,6 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 			
 			resText		= (TextView) rootView.findViewById(R.id.resistance);
 			pxText 		= (TextView) rootView.findViewById(R.id.reactance);
-			pxLabel		= (TextView) rootView.findViewById(R.id.pxLabel);
 			connectText = (TextView) rootView.findViewById(R.id.connectText);
 			usbText 	= (TextView) rootView.findViewById(R.id.usbText);
 			

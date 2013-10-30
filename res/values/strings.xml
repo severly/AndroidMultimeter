@@ -2,7 +2,7 @@
 <resources>
 
     <!--  App strings --> 
-    <string name="app_name">SEA</string>
+    <string name="app_name">UltiMeter</string>
     <string name="title_series">Series</string>
     <string name="title_parallel">Parallel</string>
     <string name="title_advanced">Advanced</string>

@@ -1,0 +1,20 @@
+<resources>
+    
+    <style name="TextXLarge">
+    	<item name="android:textSize">40sp</item>
+	</style>
+	
+    <style name="TextLarge">
+    	<item name="android:textSize">22sp</item>
+	</style>
+	
+    <style name="TextMedium">
+    	<item name="android:textSize">18sp</item>
+	</style>
+	
+    <style name="TextSmall">
+    	<item name="android:textSize">16sp</item>
+	</style>
+    
+	
+</resources>
