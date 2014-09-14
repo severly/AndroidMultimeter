@@ -12,6 +12,7 @@
     <string name="action_display">Device Info</string>
     <string name="action_list">List Devices</string>
     <string name="action_connect">Connect</string>
+    <string name="action_setDevice">Set Device</string>
     
     <!-- USB Enumeration & Connection Fragment Strings -->
     <string name="usbEnum">Enumerate</string>

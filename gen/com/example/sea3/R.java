@@ -45,31 +45,29 @@ public final class R {
         public static final int image_background=0x7f020003;
     }
     public static final class id {
-        public static final int RCImage=0x7f0b0014;
-        public static final int action_connect=0x7f0b0017;
-        public static final int action_settings=0x7f0b0018;
+        public static final int RCImage=0x7f0b0011;
+        public static final int action_connect=0x7f0b0013;
+        public static final int action_listDevices=0x7f0b0016;
+        public static final int action_setDevice=0x7f0b0014;
+        public static final int action_settings=0x7f0b0015;
         public static final int connectText=0x7f0b000a;
         public static final int dissipationfactor=0x7f0b0005;
-        public static final int freqBar=0x7f0b000e;
-        public static final int freqInput=0x7f0b000d;
-        public static final int freqText=0x7f0b000c;
-        public static final int linearLayout2=0x7f0b0013;
+        public static final int freqBar=0x7f0b000d;
+        public static final int freqInput=0x7f0b000c;
+        public static final int linearLayout2=0x7f0b0010;
         public static final int magText=0x7f0b0007;
         public static final int pager=0x7f0b0000;
         public static final int phiText=0x7f0b0009;
-        public static final int pxLabel=0x7f0b0011;
         public static final int qualityfactor=0x7f0b0003;
-        public static final int reactance=0x7f0b0012;
-        public static final int resText=0x7f0b000f;
-        public static final int resistance=0x7f0b0010;
+        public static final int reactance=0x7f0b000e;
+        public static final int resistance=0x7f0b000f;
         public static final int tableLayout1=0x7f0b000b;
         public static final int tableLayout2=0x7f0b0001;
         public static final int tableRow1=0x7f0b0002;
         public static final int tableRow2=0x7f0b0004;
         public static final int tableRow3=0x7f0b0006;
         public static final int tableRow4=0x7f0b0008;
-        public static final int usbText=0x7f0b0015;
-        public static final int xLabel=0x7f0b0016;
+        public static final int usbText=0x7f0b0012;
     }
     public static final class layout {
         public static final int activity_multi_tool=0x7f030000;
@@ -89,35 +87,36 @@ public final class R {
         public static final int srl181x144=0x7f050005;
     }
     public static final class string {
-        public static final int D=0x7f080010;
-        public static final int Q=0x7f08000f;
-        public static final int action_connect=0x7f080007;
-        public static final int action_display=0x7f080005;
-        public static final int action_list=0x7f080006;
+        public static final int D=0x7f090011;
+        public static final int Q=0x7f090010;
+        public static final int action_connect=0x7f090007;
+        public static final int action_display=0x7f090005;
+        public static final int action_list=0x7f090006;
+        public static final int action_setDevice=0x7f090008;
         /**  Menu strings 
          */
-        public static final int action_settings=0x7f080004;
+        public static final int action_settings=0x7f090004;
         /**   App strings 
          */
-        public static final int app_name=0x7f080000;
-        public static final int connectDesc=0x7f080014;
-        public static final int info=0x7f08000b;
-        public static final int mag=0x7f080011;
-        public static final int nothing=0x7f08000c;
-        public static final int phase=0x7f080012;
-        public static final int rcpar=0x7f080013;
-        public static final int react=0x7f08000e;
+        public static final int app_name=0x7f090000;
+        public static final int connectDesc=0x7f090015;
+        public static final int info=0x7f09000c;
+        public static final int mag=0x7f090012;
+        public static final int nothing=0x7f09000d;
+        public static final int phase=0x7f090013;
+        public static final int rcpar=0x7f090014;
+        public static final int react=0x7f09000f;
         /**  Data display strings 
          */
-        public static final int res=0x7f08000d;
-        public static final int title_advanced=0x7f080003;
-        public static final int title_parallel=0x7f080002;
-        public static final int title_series=0x7f080001;
-        public static final int usbConn=0x7f080009;
+        public static final int res=0x7f09000e;
+        public static final int title_advanced=0x7f090003;
+        public static final int title_parallel=0x7f090002;
+        public static final int title_series=0x7f090001;
+        public static final int usbConn=0x7f09000a;
         /**  USB Enumeration & Connection Fragment Strings 
          */
-        public static final int usbEnum=0x7f080008;
-        public static final int usbInfo=0x7f08000a;
+        public static final int usbEnum=0x7f090009;
+        public static final int usbInfo=0x7f09000b;
     }
     public static final class style {
         /** 
@@ -141,11 +140,15 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f090000;
+        public static final int AppBaseTheme=0x7f080004;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f090001;
+        public static final int AppTheme=0x7f080005;
+        public static final int TextLarge=0x7f080001;
+        public static final int TextMedium=0x7f080002;
+        public static final int TextSmall=0x7f080003;
+        public static final int TextXLarge=0x7f080000;
     }
     public static final class xml {
         public static final int device_filter=0x7f040000;

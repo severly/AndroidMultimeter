@@ -72,7 +72,8 @@
                 android:textAppearance="@style/TextXLarge"
                 android:padding="5dp"
                 android:gravity="center"
-                android:hint="00.00pF"/>
+                android:hint="00.00pF"
+                android:text="101.12nF"/>
             
         </TableRow>
 
@@ -92,6 +93,7 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:hint="00.00kΩ"
+                android:text="8.16Ω"
                 android:textAppearance="@style/TextXLarge" />
             
             
@@ -110,9 +112,8 @@
 
         <TextView
             android:id="@+id/usbText"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight = "1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity = "center_horizontal"
             android:hint="USB Text"
             android:maxLines="100"

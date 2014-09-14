@@ -19,6 +19,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -146,6 +147,8 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 		
 		if( !usbObject.isConnected )
 			usbObject.connect2Device();
+			//if( lcrSeriesFragment.isVisible )
+			//	lcrSeriesFragment.usbText.setText( usbObject.connect2Device() );
 		
 		}
 	}
@@ -177,6 +180,13 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
         
         case R.id.action_settings:
         	//usbText.setText("Settings");
+        	return true;
+        	
+        case R.id.action_setDevice:
+        	usbObject.unsetDevice();
+        	if( !usbObject.setDevice() ){
+        		Toast.makeText( this, "Set device failed", Toast.LENGTH_SHORT ).show();
+        	}
         	return true;
 
         default:
@@ -292,11 +302,12 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 	        if (UsbManager.ACTION_USB_DEVICE_ATTACHED.equals(action)) {
 	            synchronized (this) {
 	            	Toast.makeText( context, "Device attached", Toast.LENGTH_SHORT ).show();
+
 	            	if( !usbObject.connect2Device() ){
 	            		Log.e("USB","Could not connect to device");
 	            		return;
 	            	}
-	            	return;
+
 	            }
 	            
 	        }else if (UsbManager.ACTION_USB_DEVICE_DETACHED.equals(action)) {
@@ -384,7 +395,8 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 		public void onResume(){
 			super.onResume();
 
-			setConnectText( usbObject.isConnected );
+			//setConnectText( usbObject.isConnected );
+			setConnectText( true );
 			usbText.setText(" ");
 		}
 		
@@ -417,6 +429,7 @@ public class MultiTool extends FragmentActivity implements ActionBar.TabListener
 			xText 		= (TextView) rootView.findViewById(R.id.reactance);
 			connectText = (TextView) rootView.findViewById(R.id.connectText);
 			usbText 	= (TextView) rootView.findViewById(R.id.usbText);
+			usbText.setMovementMethod(new ScrollingMovementMethod());
 			
 			freqInput 	= (EditText) rootView.findViewById(R.id.freqInput);
 			

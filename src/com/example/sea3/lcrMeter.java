@@ -82,7 +82,14 @@ public class lcrMeter {
 	 */
 	public static String get_Frequency()
 	{ 
-		return Integer.toString(frequency) + Scale_F; 
+		if(frequency <= 1000) {
+			Scale_F = " Hz";
+			return Integer.toString(frequency) + Scale_F; 
+		}else
+		{
+			Scale_F = " kHz";
+			return Integer.toString(frequency/1000) + Scale_F; 
+		}
 	}
 	
 	// Return numerical RESISTANCE + qualifier as a String
@@ -156,17 +163,11 @@ public class lcrMeter {
 	public static void set_frequency(int freq)
 	{
 		
-			PWM = (48000000 / (freq * 52)) - 1;
-			frequency = 48000000/((PWM + 1)*52);
+			//PWM = (48000000 / (freq * 52)) - 1;
+			//frequency = 48000000/((PWM + 1)*52);
+			frequency = freq;
+			
 
-			if(frequency <= 1000) 
-				Scale_F = " Hz";
-			else
-			{
-				Scale_F = " kHz";
-				frequency /= 1000;
-			}
-		
 	}
 	
 	private static boolean set_status(byte lcr_status){
@@ -275,10 +276,10 @@ public class lcrMeter {
 	public static void sendData(ByteBuffer buff)
 	{
 		
-		byte b1 = (byte) (0x000000FF & (PWM >> 24) );
-		byte b2 = (byte) (0x000000FF & (PWM >> 16));
-		byte b3 = (byte) (0x000000FF & (PWM >> 8));
-		byte b4 = (byte) (0x000000FF & (PWM));
+		byte b1 = (byte) (0x000000FF & (frequency >> 24) );
+		byte b2 = (byte) (0x000000FF & (frequency >> 16));
+		byte b3 = (byte) (0x000000FF & (frequency >> 8));
+		byte b4 = (byte) (0x000000FF & (frequency));
 		
 		
 		buff.put( Freq_Byte1_Position, b1 );

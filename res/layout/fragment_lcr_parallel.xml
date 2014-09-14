@@ -31,7 +31,6 @@
                 android:layout_weight="3"
                 android:textAppearance="@style/TextLarge"
                 android:textColor="@color/white"
-                android:background="@drawable/cell_shape"
                 android:ems="10"
                 android:gravity="center"
                 android:hint="Frequency"
@@ -78,7 +77,6 @@
 
             <TextView
                 android:id="@+id/reactance"
-                android:background="@drawable/cell_shape" 
                 android:layout_width="0dp"
                 android:layout_weight="3" 
                 android:layout_gravity="center"
@@ -109,7 +107,6 @@
             
             <TextView
                 android:id="@+id/resistance"
-                android:background="@drawable/cell_shape"
                 android:layout_width="0dp"
                 android:layout_weight="3"
                 android:gravity="center"
